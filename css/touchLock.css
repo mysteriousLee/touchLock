@@ -1,0 +1,76 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 14px;
+}
+body{
+	background-image: url(../images/back.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.timeDisplay{
+	position: absolute;
+	top: 5%;
+	left: 50%;
+	height: 10rem;
+	width: 80%;
+	margin-left: -40%;
+	color: #fff;
+}
+.timeDisplay p{
+	text-align: center;
+	width: 100%;
+}
+#dateTime{
+	font-size: 2rem;
+}
+#localTime{
+	font-size: 5rem;
+	font-weight: bold;
+}
+canvas{
+	position: absolute;
+	left: 50%;
+	top: 32%;
+}
+.prompt{
+     width: 100%;
+     text-align: center;
+     font-size: 2rem;
+     position: absolute;
+     top: 30%;
+     color: #fff;
+}
+.chooseBox{
+	position: absolute;
+	top: 88%;
+	width: 60%;
+	height: 3rem;
+	margin-left: 20%;
+}
+.chooseBox button{
+	height: 100%;
+	width: 40%;
+	border-radius: 10px;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+}
+.chooseBox #setPassword{
+	float: left;
+}
+.chooseBox #checkPassword{
+	float: right;
+}
+.checked{
+    color: #fff;
+	background-color: red;
+}
+.unchecked{
+	color: #fff;
+	background-color: #8B8989;
+}
