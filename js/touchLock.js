@@ -40,17 +40,16 @@ var touchLock = {
 	        this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
 	        for (var i = 0 ; i < this.pointArr.length ; i++) {
 	            this.drawBorder(this.pointArr[i].x, this.pointArr[i].y);
-	        }
-	        this.drawCircle();
+		        this.drawCircle(this.pointArr[i].x, this.pointArr[i].y);
+		    }
+	        
     },
-    drawCircle : function(){
-    	 for (var i = 0 ; i < this.pointArr.length ; i++) {
-	            this.ctx.fillStyle = '#fff';
-                this.ctx.beginPath();
-                this.ctx.arc(this.pointArr[i].x, this.pointArr[i].y, this.r / 2, 0, Math.PI * 2, true);
-                this.ctx.closePath();
-                this.ctx.fill();
-	     }
+    drawCircle : function(x,y){
+            this.ctx.fillStyle = '#fff';
+            this.ctx.beginPath();
+            this.ctx.arc(x, y, this.r / 2, 0, Math.PI * 2, true);
+            this.ctx.closePath();
+            this.ctx.fill();
     },
     drawBorder : function(x,y){
 	        this.ctx.strokeStyle = '#fff';
@@ -128,8 +127,8 @@ var touchLock = {
 	         this.ctx.clearRect(0, 0, this.ctx.canvas.width, this.ctx.canvas.height);
 	         for (var i = 0 ; i < this.pointArr.length ; i++) { 
 	            this.drawBorder(this.pointArr[i].x, this.pointArr[i].y);
-	         }   
-	         this.drawCircle();                      
+	         	this.drawCircle(this.pointArr[i].x, this.pointArr[i].y);  
+	         }                      
 	         this.drawLine(localPos,this.passwordPath);
 	         for (var i = 0 ; i < this.restPoint.length ; i++) {
 	             var pt = this.restPoint[i];
